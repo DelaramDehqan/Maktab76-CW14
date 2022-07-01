@@ -1,4 +1,3 @@
-const table = $("table tbody");
 
 function getUsers(page) {
   return $.ajax({
