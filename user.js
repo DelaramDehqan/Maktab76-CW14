@@ -13,12 +13,9 @@ $("documnet").ready(async function runToPage() {
   let users = [...user1.data, ...user2.data];
 
   users.map((user) => {
-    $("#content").append(`
-      <div>
-        <div>${user.first_name}</div>
-        <div>${user.last_name}</div>
-        <img src=${user.avatar}></img>
-        <div>${user.email}</div>
-      </div>`);
+    $("#cards").append(`<div class="flex justify-center items-center border-solid border-2 border-amber-300 m-7 w-96 py-5 hover:bg-amber-100">
+    <div><img src="${user.avatar}" class="w-18 h-18 rounded-md"></div>
+    <div class="pl-6"><h2 class="text-blue-800">${user.first_name}</h2><p>${user.last_name}</p><p class="text-gray-400">${user.email}</p></div>
+    </div>`);
   });
 });
